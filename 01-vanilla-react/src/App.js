@@ -9,9 +9,13 @@ const Pet = (props) => {
 const App = () => {
   return React.createElement("div", {}, [
     React.createElement("h1", {}, "Hello Pets!"),
-    React.createElement(Pet, {name: "Popol", animal: "Dog", gender: "Male"}),
-    React.createElement(Pet, {name: "Roro", animal: "Penguin", gender: "Female"}),
-    React.createElement(Pet, {name: "Pupu", animal: "Cat", gender: "Male"}),
+    React.createElement(Pet, { name: "Popol", animal: "Dog", gender: "Male" }),
+    React.createElement(Pet, {
+      name: "Roro",
+      animal: "Penguin",
+      gender: "Female",
+    }),
+    React.createElement(Pet, { name: "Pupu", animal: "Cat", gender: "Male" }),
   ]);
 };
 
