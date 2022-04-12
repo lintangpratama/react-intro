@@ -1,22 +1,38 @@
-const Pet = (props) => {
-  return React.createElement("div", {}, [
-    React.createElement("h2", {}, props.name),
-    React.createElement("h3", {}, props.animal),
-    React.createElement("h3", {}, props.gender),
-  ]);
-};
+import ReactDOM from "react-dom";
+import Pet from "./Pet";
 
+// const App = () => {
+//   return React.createElement("div", {}, [
+//     React.createElement("h1", {}, "Hello Pets!"),
+//     React.createElement(Pet, {
+//       name: "Popol",
+//       animal: "Dog",
+//       gender: "Male",
+//     }),
+//     React.createElement(Pet, {
+//       name: "Roro",
+//       animal: "Penguin",
+//       gender: "Female",
+//     }),
+//     React.createElement(Pet, {
+//       name: "Pupu",
+//       animal: "Cat",
+//       gender: "Male",
+//     }),
+//   ]);
+// };
+
+
+// The code above is same as
 const App = () => {
-  return React.createElement("div", {}, [
-    React.createElement("h1", {}, "Hello Pets!"),
-    React.createElement(Pet, { name: "Popol", animal: "Dog", gender: "Male" }),
-    React.createElement(Pet, {
-      name: "Roro",
-      animal: "Penguin",
-      gender: "Female",
-    }),
-    React.createElement(Pet, { name: "Pupu", animal: "Cat", gender: "Male" }),
-  ]);
-};
+  return (
+    <div>
+      <h1>Hello Pets!</h1>
+      <Pet name="Popol" animal="Dog" gender="Male" />
+      <Pet name="Roro" animal="Penguin" gender="Female" />
+      <Pet name="Pupu" animal="Cat" gender="Male" />
+    </div>
+  )
+}
 
-ReactDOM.render(React.createElement(App), document.getElementById("root"));
+ReactDOM.render(<App />, document.getElementById("root"));
