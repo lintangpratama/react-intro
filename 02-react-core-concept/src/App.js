@@ -1,5 +1,4 @@
 import ReactDOM from "react-dom";
-import Pet from "./Pet";
 import SearchParams from "./SearchParams";
 
 // const App = () => {
@@ -30,9 +29,6 @@ const App = () => {
     <div>
       <h1>Hello Pets!</h1>
       <SearchParams />
-      <Pet name="Popol" animal="Dog" gender="Male" />
-      <Pet name="Roro" animal="Penguin" gender="Female" />
-      <Pet name="Pupu" animal="Cat" gender="Male" />
     </div>
   )
 }
